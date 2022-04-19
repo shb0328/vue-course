@@ -3,7 +3,7 @@ const app = Vue.createApp({ //Vue app object
     //it merges it into a 'global Vue instance object'. So, into your 'Vue app object'.
     return { //data object
       courseGoalA: "Finish the courese and learn Vue!", //flexible
-      courseGoalB: "Master Vue and build amazing apps!",//courseGoalB is not a variable or constant. it's a property of data object.
+      courseGoalB: "<h3>Master Vue and build amazing apps!</h3>",//courseGoalB is not a variable or constant. it's a property of data object.
       vueLink: "http://vuejs.org/"
     };
   },
