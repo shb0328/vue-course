@@ -1,7 +1,9 @@
-const app = Vue.createApp({
+const app = Vue.createApp({ //Vue app object
   data() {
-    return { //data objects
-      courseGoal: "Finish the courese and learn Vue!", //flexible
+    //it merges it into a 'global Vue instance object'. So, into your 'Vue app object'.
+    return { //data object
+      courseGoalA: "Finish the courese and learn Vue!", //flexible
+      courseGoalB: "Master Vue and build amazing apps!",//courseGoalB is not a variable or constant. it's a property of data object.
       vueLink: "http://vuejs.org/"
     };
   },
@@ -9,9 +11,9 @@ const app = Vue.createApp({
     outputGoal() {
       const randomNumber = Math.random();
       if(randomNumber < 0.5) {
-        return 'Learn Vue!';
+        return this.courseGoalA; //'this' keyword doesn't refer to data object here.
       } else {
-        return 'Master Vue!';
+        return this.courseGoalB;
       }
     }
   }
