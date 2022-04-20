@@ -16,6 +16,10 @@ const app = Vue.createApp({
     },
     setName(event, lastName) {
       this.name = event.target.value + ' ' + lastName; //event.target gives us access to the element on which the event occurred. just vanilla js.
+    },
+    submitForm(event) {
+      event.preventDefault(); //vanilla js
+      alert('Submitted!');
     }
   }
 });
