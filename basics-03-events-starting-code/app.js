@@ -14,8 +14,8 @@ const app = Vue.createApp({
     reduce(num) {
       this.counter -= num;
     },
-    setName(event) {
-      this.name = event.target.value; //event.target gives us access to the element on which the event occurred. just vanilla js.
+    setName(event, lastName) {
+      this.name = event.target.value + ' ' + lastName; //event.target gives us access to the element on which the event occurred. just vanilla js.
     }
   }
 });
