@@ -8,14 +8,23 @@ const app = Vue.createApp({
       confirmedName: ''
     };
   },
-  computed: {
-    fullName() {
-      console.log('Running again...');
-      if(this.name === '') {
-        return '';
+  watch: {
+    name(value) { //connect data 'name', using lastest value
+      if(value===''){
+        this.fullName = '';
+      } else {
+        this.fullName = value + ' ' + 'So';
       }
-      return this.name + ' ' + "So";
-    }
+    } 
+  },
+  computed: {
+    // fullName() {
+    //   console.log('Running again...');
+    //   if(this.name === '') {
+    //     return '';
+    //   }
+    //   return this.name + ' ' + "So";
+    // }
   },
   methods: {
     outputFullName() {
