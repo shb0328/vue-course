@@ -8,8 +8,18 @@ const app = Vue.createApp({
       confirmedName: ''
     };
   },
+  computed: {
+    fullName() {
+      console.log('Running again...');
+      if(this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + "So";
+    }
+  },
   methods: {
     outputFullName() {
+      console.log('Running again...');
       if(this.name === '') {
         return '';
       }
