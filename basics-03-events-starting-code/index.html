@@ -27,7 +27,7 @@
       <button @click="resetInput">Reset Input</button>
       <p>Your Name : {{ fullName }}</p>
       <form @submit.prevent="submitForm">
-        <input type="text" v-bind:value="confirmedName">
+        <input type="text" :value="confirmedName">
         <button @click="confirmInput">Sign Up</button>
       </form>
     </section>
