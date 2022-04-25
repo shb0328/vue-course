@@ -6,33 +6,34 @@ const app = Vue.createApp({
       counter: 0,
       name: '',
       lastname: '',
+      // fullName: '',
       confirmedName: ''
     };
   },
   watch: {
-    name(value) { //connect data 'name', using lastest value
-      if(value===''){
-        this.fullName = '';
-      } else {
-        this.fullName = value + ' ' + this.lastname;
-      }
-    },
-    lastname(value){
-      if(value===''){
-        this.fullName = '';
-      } else {
-        this.fullName = this.name + ' ' + value;
-      }
-    }
+    // name(value) { //connect data 'name', using lastest value
+    //   if(value===''){
+    //     this.fullName = '';
+    //   } else {
+    //     this.fullName = value + ' ' + this.lastname;
+    //   }
+    // },
+    // lastname(value){
+    //   if(value===''){
+    //     this.fullName = '';
+    //   } else {
+    //     this.fullName = this.name + ' ' + value;
+    //   }
+    // }
   },
   computed: {
-    // fullName() {
-    //   console.log('Running again...');
-    //   if(this.name === '') {
-    //     return '';
-    //   }
-    //   return this.name + ' ' + "So";
-    // }
+    fullName() {
+      console.log('Running again...');
+      if(this.name === '' || this.lastname === '') {
+        return '';
+      }
+      return this.name + ' ' + this.lastname;
+    }
   },
   methods: {
     outputFullName() {
