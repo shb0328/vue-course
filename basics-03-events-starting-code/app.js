@@ -16,13 +16,16 @@ const app = Vue.createApp({
       this.counter -= num;
     },
     setName(event, lastName) {
-      this.name = event.target.value + ' ' + lastName; //event.target gives us access to the element on which the event occurred. just vanilla js.
+      this.name = event.target.value; //event.target gives us access to the element on which the event occurred. just vanilla js.
     },
     submitForm(event) {
       alert('Submitted!');
     },
     confirmInput() {
       this.confirmedName = this.name;
+    },
+    resetInput() {
+      this.name='';
     }
   }
 });
