@@ -65,7 +65,7 @@ const app = Vue.createApp({
       alert('Submitted!');
     },
     confirmInput() {
-      this.confirmedName = this.name;
+      this.confirmedName = this.fullName;
     },
     resetInput() {
       this.name='';
