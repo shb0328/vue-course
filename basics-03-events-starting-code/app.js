@@ -11,6 +11,11 @@ const app = Vue.createApp({
     };
   },
   watch: {
+    counter(value) {
+      if(value > 50) {
+        this.counter = 0;
+      }
+    }
     // name(value) { //connect data 'name', using lastest value
     //   if(value===''){
     //     this.fullName = '';
