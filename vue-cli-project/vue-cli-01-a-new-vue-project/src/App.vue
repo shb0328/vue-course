@@ -1,3 +1,11 @@
 <template></template>
 
-<script></script>
+<script>
+const app = {
+  date() {
+    return {};
+  },
+  methods: {},
+  computed: {}
+};
+</script>
