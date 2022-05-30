@@ -3,15 +3,12 @@
     <header><h1>My Friends</h1></header>
     <ul>
       <friend-contact
-        name="Manuel"
-        phone-number="031234"
-        email-address="man@localhost.com"
+        v-for="friend in friends"
+        :key="friend.id"
+        :name="friend.name"
+        :phone-number="friend.phone"
+        :email-address="friend.email"
         :is-favorite="true"
-      ></friend-contact>
-      <friend-contact
-        name="Julie"
-        phone-number="085421"
-        email-address="jj@localhost.com"
       ></friend-contact>
     </ul>
   </section>
@@ -21,7 +18,7 @@
 import FriendContact from './components/FriendContact.vue';
 export default {
   components: { FriendContact },
-  date() {
+  data() {
     return {
       friends: [
         {

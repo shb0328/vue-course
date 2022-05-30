@@ -42,12 +42,6 @@ export default {
     return {
       friendIsFavorite: this.isFavorite,
       detailsAreVisible: false,
-      friend: {
-          id:'manuel',
-          name:'Manuel Lorenz',
-          phone:'0123 456',
-          email:'man@localhost.com'
-        }
     };
   },
   methods: {
