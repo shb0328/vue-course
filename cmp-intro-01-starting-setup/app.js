@@ -52,7 +52,7 @@ app.component('friend-contact', {
       this.detailsAreVisible = !this.detailsAreVisible;
     }
   }
-}); //identifier, conflict object 
+}); //identifier, config object 
 //identifier : 사용자 정의 HTML 요소 이름. 내장 HTML element와 충돌을 피하기 위해서 반드시 '-' (dash) 를 포함한다.
-//conflict object : main app에 연결될 app의 개체 정보. capsulation. main app과 통신하지 않음, 자체 template이 필요하다
+//config object : main app에 연결될 app의 개체 정보. capsulation. main app과 통신하지 않음, 자체 template이 필요하다
 app.mount('#app');
