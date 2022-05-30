@@ -15,9 +15,12 @@ const app = Vue.createApp({
   },
 });
 
-app.mount('#app');
+app.mount('#app');//templete!!! 
 
 const app2 = Vue.createApp({
+  template: ` 
+  <p>{{ ilove }}</p>
+  `, //using backtick
   data() {
     return {
       ilove:'pizza'
@@ -25,7 +28,7 @@ const app2 = Vue.createApp({
   }
 });
 
-app2.mount('#app2');
+app2.mount('#app2'); //templete!!! 
 
 // vue deep dive with vanilla js
 // vanilla js is not reactive
