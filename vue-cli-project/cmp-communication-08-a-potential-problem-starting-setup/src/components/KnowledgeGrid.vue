@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ['topics'],
+  inject: ['topics'], // works together with provide
   emits: ['select-topic']
 };
 </script>
